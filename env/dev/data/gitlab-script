@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#for amazon linux ami
+sudo yum install -y postfix
+sudo systemctl enable postfix
+sudo systemctl start postfix
+curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.rpm.sh | sudo bash
+sudo EXTERNAL_URL="http://gitlab.azubuikeokom.com" yum install -y gitlab-ee
+
+
